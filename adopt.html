@@ -27,16 +27,18 @@
       radial-gradient(700px 250px at 105% 0%, #5fa463 0%, transparent 60%),
       linear-gradient(160deg, var(--brown) 0%, #7c5735 55%, #8bbf8d 56%, var(--green) 100%);
   }
-  .hero .grid{display:grid;grid-template-columns:1.1fr 1fr;gap:24px;align-items:center;padding:52px 0 28px}
+  .hero .grid{display:grid;grid-template-columns:1.1fr 1fr;gap:24px;align-items:center;padding:70px 0 28px}
   .title{margin:0 0 10px;font-size:clamp(28px,5vw,54px);line-height:1.05}
   .subtitle{margin:0 0 16px;opacity:.95}
-  .hero-ill{
-    min-height:320px;border-radius:22px;overflow:hidden;
-    background:linear-gradient(180deg,#ffffff22,#00000010),url('Images/dog1.jpg') no-repeat;
-    background-size:cover;          /* fill the box */
-    background-position:50% 20%;    /* show more face */
-    box-shadow:0 30px 80px #0003, inset 0 0 0 1px #fff3;
-  }
+  .hero-ill {
+  min-height: 340px;
+  border-radius: 22px;
+  overflow: hidden;
+  background: linear-gradient(180deg, #ffffff22, #00000010), url('Images/dog7.jpg') no-repeat;
+  background-size: cover;          /* fill the box */
+  background-position: 50% 10%;    /* Adjusted to center horizontally and show more of the top (head) */
+  box-shadow: 0 30px 80px #0003, inset 0 0 0 1px #fff3;
+}
   .wave{display:block;width:100%;margin-top:-2px}
 
   /* FILTERS */
@@ -60,10 +62,10 @@
   /* responsive, face-friendly thumbnails */
   .thumb{
     width:100%;
-    aspect-ratio:3 / 2;     /* uniform shape; change to 1/1 or 4/3 if you prefer */
+    aspect-ratio:2 / 2;     /* uniform shape; change to 1/1 or 4/3 if you prefer */
     height:auto;
     object-fit:cover;
-    object-position:50% 25%;/* nudge up to show faces */
+    object-position:50% 15%;/* nudge up to show faces */
     background:#eee;
   }
 
@@ -111,6 +113,38 @@
 </style>
 </head>
 <body>
+  <!-- Header Start -->
+  <header>
+    <div style="background: linear-gradient(90deg, #2196f3 0%, #21cb7a 100%); color: #fff; padding: 8px 0; font-size: 15px; display: flex; justify-content: space-between; align-items: center;">
+      <div style="margin-left: 30px;">
+        <span style="margin-right: 20px;">☎ +00 1234 567</span>
+        <span>✉ youremail@email.com</span>
+      </div>
+      <div style="margin-right: 30px;">
+        <a href="#" style="color: #fff; margin: 0 8px;"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" style="color: #fff; margin: 0 8px;"><i class="fab fa-twitter"></i></a>
+        <a href="#" style="color: #fff; margin: 0 8px;"><i class="fab fa-instagram"></i></a>
+        <a href="#" style="color: #fff; margin: 0 8px;"><i class="fab fa-dribbble"></i></a>
+      </div>
+    </div>
+    <nav style="background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.03); display: flex; align-items: center; padding: 0 30px;">
+      <div style="display: flex; align-items: center;">
+        <span style="font-size: 2rem; color: #21cb7a; margin-right: 10px;">🐾</span>
+        <span style="font-size: 2rem; font-weight: bold; color: #222;">Pawfect-Pals</span>
+      </div>
+      <ul style="list-style: none; display: flex; margin-left: auto;">
+        <li style="margin: 0 18px;"><a href="#" style="text-decoration: none; color: #222; font-weight: 600;">HOME</a></li>
+        <li style="margin: 0 18px;"><a href="#" style="text-decoration: none; color: #222; font-weight: 600;">ABOUT</a></li>
+        <li style="margin: 0 18px;"><a href="#" style="text-decoration: none; color: #222; font-weight: 600;">OUR TEAM</a></li>
+        <li style="margin: 0 18px;"><a href="#" style="text-decoration: none; color: #222; font-weight: 600;">GALLERY</a></li>
+        <li style="margin: 0 18px;"><a href="#" style="text-decoration: none; color:#222; font-weight: 600;">ADOPT</a></li>
+        <li style="margin: 0 18px;"><a href="#" style="text-decoration: none; color: #222; font-weight: 600;">DONATION</a></li>
+        <li style="margin: 0 18px;"><a href="#" style="text-decoration: none; color:#222 ; font-weight: 600;">BLOG</a></li>
+        <li style="margin: 0 18px;"><a href="#" style="text-decoration: none; color: #222; font-weight: 600;">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Header End -->
   <!-- HERO -->
   <section class="hero">
     <div class="container grid">
@@ -316,13 +350,14 @@
     grid.innerHTML = data.map(cardHTML).join('') || `<div class="pill" style="justify-content:center">No pets match your filters.</div>`;
     countEl.textContent = `Showing ${data.length} of ${animals.length} pets (one page)`;
 
-    // hero image from first pet (overrides CSS default)
-    if (animals[0]?.image) {
-      document.querySelector('.hero-ill').style.backgroundImage =
-        `linear-gradient(180deg,#ffffff22,#00000010),url('${animals[0].image}')`;
-      document.querySelector('.hero-ill').style.backgroundPosition = '50% 20%';
-      document.querySelector('.hero-ill').style.backgroundSize = 'cover';
-    }
+    // fixed hero image: always show dog7 and reveal more of the lower part
+    (function(){
+      const hero = document.querySelector('.hero-ill');
+      if(!hero) return;
+      hero.style.backgroundImage = `linear-gradient(180deg,#ffffff22,#00000010),url('${IMG_DIR}/dogcat.jpg')`;
+      hero.style.backgroundPosition = '50% 42%'; // move focus downward (show more body)
+      hero.style.backgroundSize = 'cover';
+    })();
   }
 
   /* ---------- FAVORITES: event delegation (robust) ---------- */
