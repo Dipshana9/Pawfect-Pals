@@ -57,9 +57,9 @@
 	        	<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
 	        	<li class="nav-item active"><a href="about.html" class="nav-link">About</a></li>
 	        	<li class="nav-item"><a href="vet.html" class="nav-link">Veterinarian</a></li>
-	        	<li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+	        	<li class="nav-item"><a href="adoption.html"class="nav-link">Adoption</a></li>
 	          <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
-	          <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
+	          <li class="nav-item"><a href="donation.html" class="nav-link">Donation</a></li>
 	          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
 	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
 	        </ul>
@@ -191,18 +191,25 @@
     				<div class="heading-section mb-5 mt-5 mt-lg-0">
 	            <h2 class="mb-3">Frequently Asks Questions</h2>
     				</div>
-    				<div id="accordion" class="myaccordion w-100" aria-multiselectable="true">
+    				<div id="accordion">
 						  <div class="card">
 						    <div class="card-header p-0" id="headingOne">
 						      <h2 class="mb-0">
-						        <button href="#collapseOne" class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link" data-parent="#accordion" data-toggle="collapse" aria-expanded="true" aria-controls="collapseOne">
+								<button class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link"
+								data-toggle="collapse"
+								data-target="#collapseOne"
+								aria-expanded="true"
+								aria-controls="collapseOne">
+						        
 						        	<p class="mb-0">How to train your pet dog?</p>
 						          <i class="fa" aria-hidden="true"></i>
 						        </button>
 						      </h2>
 						    </div>
-						    <div class="collapse show" id="collapseOne" role="tabpanel" aria-labelledby="headingOne">
-						      <div class="card-body py-3 px-0">
+						    <div id="collapseOne" class="collapse show"
+								aria-labelledby="headingOne"
+								data-parent="#accordion">
+							<div class="card-body">
 						      	<ol>
 						      		<li>Start with Basic Commands-Teach “sit,” “stay,” “come,” and “down” first.</li>
 						      		<li>Use Positive Reinforcement- Reward with treats, praise, or play for good behavior.</li>
@@ -217,14 +224,20 @@
 						  <div class="card">
 						    <div class="card-header p-0" id="headingTwo" role="tab">
 						      <h2 class="mb-0">
-						        <button href="#collapseTwo" class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link" data-parent="#accordion" data-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
+						         <button class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link collapsed"
+									data-toggle="collapse"
+									data-target="#collapseTwo"
+									aria-expanded="false"
+									aria-controls="collapseTwo">
 						        	<p class="mb-0">How to manage your pets?</p>
 						          <i class="fa" aria-hidden="true"></i>
 						        </button>
 						      </h2>
 						    </div>
-						    <div class="collapse" id="collapseTwo" role="tabpanel" aria-labelledby="headingTwo">
-						      <div class="card-body py-3 px-0">
+						    <div id="collapseTwo" class="collapse"
+							aria-labelledby="headingTwo"
+							data-parent="#accordion">
+						<div class="card-body">
 						      	<ol>
 						      		<li>Provide proper nutrition with a balanced diet suitable for their needs.</li>
 						      		<li>Keep them active through regular walks, playtime, and exercise.</li>
@@ -237,7 +250,14 @@
 						  </div>
 
 						  <div class="card">
-						    <div class="card-header p-0" id="headingThree" role="tab">
+						    <div class="card">
+							<div class="card-header" id="headingThree">
+							<h2 class="mb-0">
+								<button class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link collapsed"
+										data-toggle="collapse"
+										data-target="#collapseThree"
+										aria-expanded="false"
+										aria-controls="collapseThree">
 						      <h2 class="mb-0">
 						        <button href="#collapseThree" class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link" data-parent="#accordion" data-toggle="collapse" aria-expanded="false" aria-controls="collapseThree">
 						        	<p class="mb-0">What is the best grooming for your pets?</p>
@@ -245,8 +265,10 @@
 						        </button>
 						      </h2>
 						    </div>
-						    <div class="collapse" id="collapseThree" role="tabpanel" aria-labelledby="headingTwo">
-						      <div class="card-body py-3 px-0">
+						    <div id="collapseThree" class="collapse"
+								aria-labelledby="headingThree"
+								data-parent="#accordion">
+							<div class="card-body">
 						      	<ol>
 						      		<li>Bathing with pet-safe products maintains hygiene and freshness</li>
 						      		<li>Nail trimming prevents discomfort and supports healthy movement</li>
@@ -257,17 +279,23 @@
 						    </div>
 						  </div>
 
-						  <div class="card">
-						    <div class="card-header p-0" id="headingFour" role="tab">
-						      <h2 class="mb-0">
-						        <button href="#collapseFour" class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link" data-parent="#accordion" data-toggle="collapse" aria-expanded="false" aria-controls="collapseFour">
+						  			<div class="card">
+										<div class="card-header" id="headingFour">
+										<h2 class="mb-0">
+										<button class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link collapsed"
+												data-toggle="collapse"
+												data-target="#collapseFour"
+												aria-expanded="false"
+												aria-controls="collapseFour">
 						        	<p class="mb-0">What are those requirements for sitting pets?</p>
 						          <i class="fa" aria-hidden="true"></i>
 						        </button>
 						      </h2>
 						    </div>
-						    <div class="collapse" id="collapseFour" role="tabpanel" aria-labelledby="headingTwo">
-						      <div class="card-body py-3 px-0">
+						    <div id="collapseFour" class="collapse"
+							aria-labelledby="headingFour"
+							data-parent="#accordion">
+							<div class="card-body">
 						      	<p>Pet sitting requires providing proper food and fresh water, ensuring regular exercise and playtime, keeping the pet's living space clean and safe, giving necessary medications if needed, and offering love, attention, and companionship to keep them happy and comfortable in the owner's absence.</p>
 						      </div>
 						    </div>
@@ -276,6 +304,98 @@
 	        </div>
         </div>
     	</div>
+    </section>
+
+    <section class="ftco-section testimony-section" style="background-image: url('images/bg_2.jpg');">
+    	<div class="overlay"></div>
+      <div class="container">
+        <div class="row justify-content-center pb-5 mb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h2>Happy Clients &amp; Feedbacks</h2>
+          </div>
+        </div>
+        <div class="row ftco-animate">
+          <div class="col-md-12">
+            <div class="carousel-testimony owl-carousel ftco-owl">
+              <div class="item">
+                <div class="testimony-wrap py-4">
+                	<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
+                  <div class="text">
+                    <p class="mb-4">The team was incredibly professional and caring with my pets. I felt assured they were in good hands</p>
+                    <div class="d-flex align-items-center">
+                    	<div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
+                    	<div class="pl-3">
+		                    <p class="name">Rabindra Nath Nakarmi</p>
+		                    <span class="position">CEO</span>
+		                  </div>
+	                  </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap py-4">
+                	<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
+                  <div class="text">
+                    <p class="mb-4">Excellent service! My dog enjoyed the grooming session and came home happy and clean.</p>
+                    <div class="d-flex align-items-center">
+                    	<div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
+                    	<div class="pl-3">
+		                    <p class="name">Rishi Tamang</p>
+		                    <span class="position">Marketing Manager</span>
+		                  </div>
+	                  </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap py-4">
+                	<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
+                  <div class="text">
+                    <p class="mb-4">I really appreciate the health camp they organized; it helped my pets stay healthy and active.</p>
+                    <div class="d-flex align-items-center">
+                    	<div class="user-img" style="background-image: url(images/person_3.jpg)"></div>
+                    	<div class="pl-3">
+		                    <p class="name">Krish Shrestha</p>
+		                    <span class="position">Manager</span>
+		                  </div>
+	                  </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap py-4">
+                	<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
+                  <div class="text">
+                    <p class="mb-4">Highly recommend! The rescue and adoption support they provide is outstanding.</p>
+                    <div class="d-flex align-items-center">
+                    	<div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
+                    	<div class="pl-3">
+		                    <p class="name">Rishab Signh</p>
+		                    <span class="position">HR</span>
+		                  </div>
+	                  </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap py-4">
+                	<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
+                  <div class="text">
+                    <p class="mb-4">Professional, friendly, and very responsive! They treat pets like family.</p>
+                    <div class="d-flex align-items-center">
+                    	<div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
+                    	<div class="pl-3">
+		                    <p class="name">Akash Thapa</p>
+		                    <span class="position">Health Assistant</span>
+		                  </div>
+	                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="ftco-section testimony-section" style="background-image: url('images/bg_2.jpg');">
