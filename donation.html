@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Donate - Help Our Pets</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google Fonts: Montserrat -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: #4d4d4d;
+      overflow-x: hidden;
+      background-color: #f8f9fa;
+    }
+    
+    /* Top Bar */
+    .top-bar {
+      background-color: #17a2b8;
+      color: white;
+      padding: 8px 0;
+      font-size: 14px;
+    }
+    
+    .top-bar a {
+      color: white;
+      margin-right: 15px;
+    }
+    
+    .social-media a {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      margin-left: 5px;
+    }
+    
+    /* Navigation */
+    .navbar {
+      padding: 15px 0;
+      background: #343a40 !important;
+    }
+    
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 24px;
+    }
+    
+    .navbar-dark .navbar-nav .nav-link {
+      color: rgba(255, 255, 255, 0.8);
+      font-weight: 500;
+      padding: 10px 15px;
+    }
+    
+    .navbar-dark .navbar-nav .nav-link:hover,
+    .navbar-dark .navbar-nav .active > .nav-link {
+      color: #ffffff;
+    }
+    
+    /* Hero Section */
+    .hero-wrap {
+      position: relative;
+    background: url('https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center;
+      background-size: cover;
+      height: 400px;
+    }
+    
+    .hero-wrap .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .hero-wrap .slider-text {
+      position: relative;
+      z-index: 1;
+      color: white;
+    }
+    
+    .breadcrumbs {
+      font-size: 14px;
+    }
+    
+    .breadcrumbs a {
+      color: #fff;
+    }
+    
+    /* Donation Cards */
+    .block-7 {
+      border-radius: 10px;
+      overflow: hidden;
+      background: white;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      border: 1px solid #e9ecef;
+    }
+    
+    .block-7:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+    
+    .block-7 .img {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      height: 200px;
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .block-7 .price {
+      font-size: 30px;
+      font-weight: 700;
+      color: #17a2b8;
+    }
+    
+    .block-7 .price sub {
+      font-size: 16px;
+      font-weight: 400;
+    }
+    
+    .block-7 .excerpt {
+      font-weight: 600;
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: #343a40;
+    }
+    
+    .block-7 .pricing-text {
+      margin-bottom: 20px;
+    }
+    
+    .block-7 .pricing-text li {
+      margin-bottom: 10px;
+      text-align: left;
+      padding-left: 20px;
+      color: #6c757d;
+    }
+    
+    /* Appointment Form */
+    .ftco-appointment {
+      position: relative;
+      background: url('https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center;
+      background-size: cover;
+      padding: 80px 0;
+    }
+    
+    .ftco-appointment .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .ftco-appointment .half {
+      background: white;
+      border-radius: 10px;
+      position: relative;
+      z-index: 1;
+      padding: 30px;
+    }
+    
+    /* Footer */
+    .footer {
+      background: #343a40;
+      color: rgba(255, 255, 255, 0.7);
+      padding: 70px 0 30px;
+    }
+    
+    .footer-heading {
+      font-size: 18px;
+      margin-bottom: 30px;
+      color: #fff;
+      font-weight: 600;
+    }
+    
+    .footer .block-21 .text .heading {
+      font-size: 16px;
+      font-weight: 500;
+    }
+    
+    .footer .block-21 .text .heading a {
+      color: rgba(255, 255, 255, 0.7);
+    }
+    
+    .footer .block-23 ul {
+      padding: 0;
+    }
+    
+    .footer .block-23 ul li {
+      list-style: none;
+      margin-bottom: 10px;
+    }
+    
+    .footer .block-23 ul li span {
+      color: #fff;
+      margin-right: 10px;
+    }
+    
+    /* Custom Button Styles */
+    .btn-primary {
+      background-color: #17a2b8;
+      border-color: #17a2b8;
+      padding: 12px 20px;
+      font-weight: 600;
+      border-radius: 30px;
+    }
+    
+    .btn-primary:hover {
+      background-color: #138496;
+      border-color: #117a8b;
+    }
+    
+    /* Donation Modal Styles */
+    .donation-modal .modal-content {
+      border-radius: 15px;
+      overflow: hidden;
+      border: none;
+    }
+    
+    .donation-modal .modal-header {
+      background-color: #17a2b8;
+      color: white;
+      border-bottom: none;
+      padding: 15px 20px;
+    }
+    
+    .donation-modal .modal-body {
+      padding: 30px;
+    }
+    
+    .donation-modal .close {
+      color: white;
+      opacity: 1;
+    }
+    
+    .donation-success {
+      text-align: center;
+      padding: 20px;
+    }
+    
+    .donation-success i {
+      font-size: 60px;
+      color: #28a745;
+      margin-bottom: 15px;
+    }
+    
+    .donation-options {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+    }
+    
+    .donation-option {
+      margin: 0 10px;
+      cursor: pointer;
+      padding: 10px 15px;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      transition: all 0.3s;
+    }
+    
+    .donation-option.active {
+      border-color: #17a2b8;
+      background-color: #f8f9fa;
+    }
+    
+    /* Dog Elements */
+    .dog-paw {
+      color: #17a2b8;
+      margin-right: 5px;
+    }
+    
+    .dog-icon {
+      font-size: 24px;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+    
+    .section-title {
+      position: relative;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    
+    .section-title:after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: #17a2b8;
+      margin: 15px auto;
+    }
+    
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .donation-options {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .donation-option {
+        margin: 5px 0;
+        width: 100%;
+        text-align: center;
+      }
+      
+      .hero-wrap {
+        height: 300px;
+      }
+      
+      .block-7 {
+        margin-bottom: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 d-flex align-items-center">
+          <p class="mb-0">
+            <a href="#" class="mr-2"><span class="fa fa-phone mr-1"></span> 9824897564</a>
+            <a href="#"><span class="fa fa-paper-plane mr-1"></span> info@pawfectpals.com</a>
+          </p>
+        </div>
+        <div class="col-md-6 d-flex justify-content-md-end">
+          <div class="social-media">
+            <p class="mb-0 d-flex">
+              <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a>
+              <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-twitter"><i class="sr-only">Twitter</i></span></a>
+              <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
+              <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-dribbble"><i class="sr-only">Dribbble</i></span></a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><span class="fa fa-paw dog-icon"></span>Pawfect-Pals</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="fa fa-bars"></span> Menu
+      </button>
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+         <!---- <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="vet.html" class="nav-link">Veterinarian</a></li>
+          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+          <li class="nav-item active"><a href="donate.html" class="nav-link">Donate</a></li>
+          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>--->
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+	        	<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+	        	<li class="nav-item"><a href="vet.html" class="nav-link">Our Team</a></li>
+	        	
+	          <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+            <li class="nav-item"><a href="adopt.html" class="nav-link">Adopt</a></li>
+	          <li class="nav-item"><a href="pricing.html" class="nav-link">Donation</a></li>
+	          <li class="nav-item active"><a href="blog.html" class="nav-link">Blog</a></li>
+	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Banner -->
+  <section class="hero-wrap">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row no-gutters slider-text align-items-end">
+        <div class="col-md-9 pb-5">
+          <p class="breadcrumbs mb-2">
+            <span class="mr-2"><a href="index.html">Home <i class="fa fa-arrow-right"></i></a></span>
+            <span>Donate <i class="fa fa-arrow-right"></i></span>
+          </p>
+          <h1 class="mb-0 bread">Support Our Furry Friends</h1>
+          <p class="mb-0">Your donation helps provide food, shelter, and medical care for abandoned pets</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Donation Packages -->
+  <section class="ftco-section bg-light py-5">
+    <div class="container">
+      <div class="row justify-content-center pb-5 mb-3">
+        <div class="col-md-7 text-center">
+          <h2 class="section-title">Make a Difference Today</h2>
+          <p>Your generous donation helps us care for abandoned pets, provide medical treatment, and support shelter operations. Every dollar makes a difference in a pet's life.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="block-7 text-center">
+            <div class="img" style="background-image: url('https://images.unsplash.com/photo-1548199973-03cce0bbc87b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+            <div class="p-4">
+              <span class="excerpt d-block">Help a Pet</span>
+              <span class="price">Rs</sup><span class="number">1000</span> <sub>one-time</sub></span>
+              <ul class="pricing-text mb-4">
+                <li><span class="fa fa-heart dog-paw"></span> Feeds a pet for a week</li>
+                <li><span class="fa fa-check dog-paw"></span> Vaccination support</li>
+                <li><span class="fa fa-paw dog-paw"></span> Supplies basic care</li>
+              </ul>
+              <a href="#" class="btn btn-primary d-block px-2 py-3 donate-btn" data-amount="1000">Donate Rs 1000</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="block-7 text-center">
+            <div class="img" style="background-image: url('https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+            <div class="p-4">
+              <span class="excerpt d-block">Support Treatment</span>
+              <span class="price">Rs</sup><span class="number">5000</span> <sub>one-time</sub></span>
+              <ul class="pricing-text mb-4">
+                <li><span class="fa fa-heart dog-paw"></span> Covers vet check-up</li>
+                <li><span class="fa fa-check dog-paw"></span> Medication for a week</li>
+                <li><span class="fa fa-paw dog-paw"></span> Emergency care support</li>
+              </ul>
+              <a href="#" class="btn btn-primary d-block px-2 py-3 donate-btn" data-amount="5000">Donate Rs 5000</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="block-7 text-center">
+            <div class="img" style="background-image: url('https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+            <div class="p-4">
+              <span class="excerpt d-block">Save a Life</span>
+              <span class="price">Rs</sup><span class="number">10000</span> <sub>one-time</sub></span>
+              <ul class="pricing-text mb-4">
+                <li><span class="fa fa-heart dog-paw"></span> Full medical procedure</li>
+                <li><span class="fa fa-check dog-paw"></span> Surgery or trauma care</li>
+                <li><span class="fa fa-paw dog-paw"></span> Long-term shelter stay</li>
+              </ul>
+              <a href="#" class="btn btn-primary d-block px-2 py-3 donate-btn" data-amount="10000">Donate Rs 10000</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5 justify-content-center">
+        <div class="col-md-6 text-center">
+          <p>Prefer to help regularly? <a href="#">Become a monthly supporter</a>.</p>
+          <a href="#" class="btn btn-outline-primary mt-3">Donate Monthly</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How Donations Help -->
+  <section class="ftco-section py-5">
+    <div class="container">
+      <div class="row justify-content-center mb-5">
+        <div class="col-md-7 text-center">
+          <h2 class="section-title">How Your Donation Helps</h2>
+          <p>See the direct impact of your generosity on the lives of our furry friends</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 text-center mb-4">
+          <div class="icon mb-3">
+            <span class="fa fa-heartbeat fa-3x" style="color: #17a2b8;"></span>
+          </div>
+          <h4>Medical Care</h4>
+          <p>Vaccinations, spay/neuter surgeries, and emergency treatments</p>
+        </div>
+        <div class="col-md-3 text-center mb-4">
+          <div class="icon mb-3">
+            <span class="fa fa-cutlery fa-3x" style="color: #17a2b8;"></span>
+          </div>
+          <h4>Nutrition</h4>
+          <p>Quality food and clean water for all shelter animals</p>
+        </div>
+        <div class="col-md-3 text-center mb-4">
+          <div class="icon mb-3">
+            <span class="fa fa-home fa-3x" style="color: #17a2b8;"></span>
+          </div>
+          <h4>Shelter</h4>
+          <p>Safe and comfortable living spaces for animals</p>
+        </div>
+        <div class="col-md-3 text-center mb-4">
+          <div class="icon mb-3">
+            <span class="fa fa-paw fa-3x" style="color: #17a2b8;"></span>
+          </div>
+          <h4>Enrichment</h4>
+          <p>Toys, training, and socialization for mental wellbeing</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Consultation Form -->
+  <section class="ftco-appointment">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row d-md-flex justify-content-end">
+        <div class="col-md-12 col-lg-6 half p-4 py-5 pl-lg-5">
+          <h2 class="mb-4">Have a Question or Want to Help?</h2>
+          <form id="contactForm" class="appointment">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <div class="form-field">
+                    <div class="select-wrap">
+                      <div class="icon"><span class="fa fa-chevron-down"></span></div>
+                      <select name="service" class="form-control" required>
+                        <option value="">How would you like to help?</option>
+                        <option value="donate">Make a Donation</option>
+                        <option value="sponsor">Sponsor a Pet</option>
+                        <option value="medical">Support Medical Care</option>
+                        <option value="food">Donate Food/Supplies</option>
+                        <option value="volunteer">Volunteer</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <div class="input-wrap">
+                    <div class="icon"><span class="fa fa-calendar"></span></div>
+                    <input type="text" name="date" class="form-control appointment_date" placeholder="Preferred Contact Date">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <div class="input-wrap">
+                    <div class="icon"><span class="fa fa-clock-o"></span></div>
+                    <input type="text" name="time" class="form-control appointment_time" placeholder="Preferred Time">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <textarea name="message" cols="30" rows="7" class="form-control" placeholder="Your Message or Special Request" required></textarea>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <input type="submit" value="Send Message" class="btn btn-primary py-3 px-4">
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+          <h2 class="footer-heading"><Pawfect-Pals></Pawfect-Pals></h2>
+          <p>Helping pets find love, care, and forever homes since 2020.</p>
+          <ul class="ftco-footer-social p-0">
+            <li class="list-inline-item"><a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><span class="fa fa-twitter"></span></a></li>
+            <li class="list-inline-item"><a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><span class="fa fa-facebook"></span></a></li>
+            <li class="list-inline-item"><a href="#" data-toggle="tooltip" data-placement="top" title="Instagram"><span class="fa fa-instagram"></span></a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+          <h2 class="footer-heading">Latest News</h2>
+          <div class="block-21 mb-4 d-flex">
+            <a class="img mr-4 rounded" style="background-image: url('https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); width: 80px; height: 80px; background-size: cover;"></a>
+            <div class="text">
+              <h3 class="heading"><a href="#">New Shelter Opening Next Month</a></h3>
+              <div class="meta">
+<<<<<<< Updated upstream
+                <div><a href="#"><span class="fa fa-calendar"></span> April 7, 2020</a></div>
+                <div><a href="#"><span class="fa fa-user"></span> Admin</a></div>
+=======
+                <div><a href="#"><span class="fa fa-calendar"></span> April 21, 2020</a></div>
+                <div><a href="#"><span class="fa fa-user"></span> Pal</a></div>
+>>>>>>> Stashed changes
+                <div><a href="#"><span class="fa fa-comment"></span> 19</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 pl-lg-5 mb-4 mb-md-0">
+          <h2 class="footer-heading">Quick Links</h2>
+          <ul class="list-unstyled">
+            <li><a href="#" class="py-2 d-block">Home</a></li>
+            <li><a href="#" class="py-2 d-block">About</a></li>
+            <li><a href="#" class="py-2 d-block">Services</a></li>
+            <li><a href="#" class="py-2 d-block">Gallery</a></li>
+            <li><a href="#" class="py-2 d-block">Blog</a></li>
+            <li><a href="#" class="py-2 d-block">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+          <h2 class="footer-heading">Have Questions?</h2>
+          <div class="block-23 mb-3">
+            <ul>
+              <li><span class="icon fa fa-map"></span> <span class="text">Naxal-23 Kathmandu , Nepal</span></li>
+              <li><a href="#"><span class="icon fa fa-phone"></span> <span class="text">9824897564</span></a></li>
+              <li><a href="#"><span class="icon fa fa-paper-plane"></span> <span class="text">info@pawfectpals</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-md-12 text-center">
+          <p class="copyright">
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i class="fa fa-heart" aria-hidden="true"></i> for animals
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Donation Modal -->
+  <div class="modal fade donation-modal" id="donationModal" tabindex="-1" role="dialog" aria-labelledby="donationModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="donationModalLabel">Make a Donation</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div id="donationForm">
+            <h4 class="text-center mb-4">Donate Rs<span id="selectedAmount">5000</span></h4>
+            <p class="text-center">Your donation will help provide medical care for pets in need.</p>
+            
+            <div class="donation-options mb-4">
+              <div class="donation-option" data-amount="1000">Rs 1000</div>
+              <div class="donation-option active" data-amount="5000">5000</div>
+              <div class="donation-option" data-amount="1000">Rs1000</div>
+            </div>
+            
+            <form id="donationDetailsForm">
+              <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" class="form-control" id="fullName" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" class="form-control" id="email" required>
+              </div>
+              <div class="form-group">
+                <label for="paymentMethod">Payment Method</label>
+                <select class="form-control" id="paymentMethod" required>
+                  <option value="">Select payment method</option>
+                  <option value="creditCard">Credit Card</option>
+                  <option value="paypal">PayPal</option>
+                  <option value="bankTransfer">Bank Transfer</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block mt-4">Donate Now</button>
+            </form>
+          </div>
+          
+          <div id="donationSuccess" class="donation-success" style="display: none;">
+            <i class="fa fa-check-circle"></i>
+            <h3>Thank You for Your Donation!</h3>
+            <p>Your generous contribution of Rs<span id="donatedAmount">5000</span> will help provide medical care for pets in need.</p>
+            <p>A confirmation email has been sent to your inbox.</p>
+            <button type="button" class="btn btn-primary mt-3" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+
+  <!-- Form Submission Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById('contactForm');
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault(); // Prevent default form submission
+
+        const name = form.querySelector('input[name="name"]').value.trim();
+        const email = form.querySelector('input[name="email"]').value.trim();
+        const message = form.querySelector('textarea[name="message"]').value.trim();
+
+        if (!name || !email || !message) {
+          alert('Please fill out all required fields.');
+          return;
+        }
+
+        // Simulate form submission success
+        alert('Thank you! Your message has been sent.');
+        form.reset(); // Clears all form fields after OK is clicked
+      });
+    });
+  </script>
+
+  <!-- Donation Modal Script -->
+  <script>
+    $(document).ready(function() {
+      // Handle donation button clicks
+      $('.donate-btn').click(function(e) {
+        e.preventDefault();
+        const amount = $(this).data('amount');
+        
+        // Set the initial amount in the modal
+        $('#selectedAmount').text(amount);
+        $('#donatedAmount').text(amount);
+        
+        // Reset the form and show donation form (not success message)
+        $('#donationForm').show();
+        $('#donationSuccess').hide();
+        $('#donationDetailsForm')[0].reset();
+        
+        // Set the clicked amount as active
+        $('.donation-option').removeClass('active');
+        $(`.donation-option[data-amount="${amount}"]`).addClass('active');
+        
+        // Show the modal
+        $('#donationModal').modal('show');
+      });
+      
+      // Handle donation option clicks in the modal
+      $('.donation-option').click(function() {
+        const amount = $(this).data('amount');
+        
+        // Update the selected amount
+        $('#selectedAmount').text(amount);
+        $('#donatedAmount').text(amount);
+        
+        // Update active state
+        $('.donation-option').removeClass('active');
+        $(this).addClass('active');
+      });
+      
+      // Handle donation form submission
+      $('#donationDetailsForm').submit(function(e) {
+        e.preventDefault();
+        
+        // Basic validation
+        const fullName = $('#fullName').val();
+        const email = $('#email').val();
+        const paymentMethod = $('#paymentMethod').val();
+        
+        if (!fullName || !email || !paymentMethod) {
+          alert('Please fill out all required fields.');
+          return;
+        }
+        
+        // In a real implementation, you would process the payment here
+        // For this demo, we'll just show the success message
+        
+        // Hide the form and show success message
+        $('#donationForm').hide();
+        $('#donationSuccess').show();
+      });
+    });
+  </script>
+
+</body>
+</html>
+
